@@ -1,9 +1,20 @@
 <html><head>
 <style>
 body {
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: center;
-  font-size: 50vw;
+  font-size: 35vw;
+}
+.bar {
+	border: 1px solid gray;
+	height: 25px;
+	margin: 0 15% 0 15%;
+	background: gray;
+}
+.bar div {
+	background: black;
+	width: 20%;
+	height: 100%;
 }
 </style><body>
 <script>
@@ -11,4 +22,9 @@ var days = Math.round((new Date(2018,11,31,23,59,59)-new Date())/1000/60/60/24) 
 document.title = days;
 document.write(days);
 </script>
+<div class="bar">
+<script>
+document.write("<div style='width: " + (100 - (days / 500)) + "%'></div>");
+</script>
+</div>
 </body></html>
